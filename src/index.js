@@ -1,5 +1,4 @@
-// require("dotenv").config({ path: "./env" });
-
+// require("dotenv").config({ path: "./env" }); this is also workable
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 
@@ -9,15 +8,14 @@ dotenv.config({
 
 connectDB();
 
-/**
- * import express from "express";
+/*
+import express from "express";
 const app = express();
-
 (async () => {
   try {
     await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
-    app.on("error", (error) => {
-      console.log("ERROR: ", error);
+    app.on("Error", (error) => {
+      console.log("ERROR2: ", error);
       throw error;
     });
 
@@ -25,8 +23,8 @@ const app = express();
       console.log(`App is listening on port ${process.env.PORT}`);
     });
   } catch (error) {
-    console.error("ERROR: ", error);
-    throw err;
+    console.error("ERROR1: ", error);
+    throw error;
   }
 })();
- */
+*/
